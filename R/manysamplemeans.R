@@ -10,7 +10,7 @@
 #'
 #' @export
 
-many_sample_means <- function(vec, n, reps) {
+manysamplemeans <- function(vec, n, reps) {
   rep_vec <- replicate(reps, sample(vec, n), simplify = "vector")
   mean_vec <- apply(rep_vec, 2, mean)
   return(mean_vec)

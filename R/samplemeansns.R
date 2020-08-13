@@ -12,7 +12,7 @@
 
 sample_means_ns <- function(vec, reps, ns) {
   ns_names <- as.character(ns)
-  means <- map_dfc(ns, ~many_sample_means(vec, .x, reps))
+  means <- map_dfc(ns, ~manysamplemeans(vec, .x, reps))
   colnames(means) <- ns_names
   return(means)
 }
